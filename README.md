@@ -470,7 +470,7 @@ For development, `claude_mark.py` honours `CLAUDEMARK_TEST_ROOT` (a scratch copy
 
 ## Notes, credits and licence
 
-ClaudeMark is an independent project. It is not made by, affiliated with or endorsed by Anthropic or Robert McNeel & Associates. Claude and Claude Code are trademarks of Anthropic; Rhino is a trademark of Robert McNeel & Associates.
+ClaudeMark is an independent project. It is not affiliated with or endorsed by Anthropic or Robert McNeel & Associates. Claude and Claude Code are trademarks of Anthropic; Rhino is a trademark of Robert McNeel & Associates.
 
 The launch film drives the real ClaudeMark window. Its score is original and synthesised in code, its voice-over and sound effects were made with ElevenLabs, and every model, capture and material swatch in it is an original demo made for this project.
 
