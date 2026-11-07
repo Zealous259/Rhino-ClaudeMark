@@ -1,0 +1,1893 @@
+{
+ "version": "4.1",
+ "mode": "capture",
+ "image": {
+  "url": "../mock/capture.jpg",
+  "w": 1920,
+  "h": 1080
+ },
+ "info": {
+  "doc": "Lakeside Pavilion.3dm",
+  "path": "C:\\Users\\you\\Projects\\Lakeside Pavilion\\Lakeside Pavilion.3dm",
+  "view": "Perspective",
+  "display": "Rendered",
+  "units": "Millimeters",
+  "selected": 0
+ },
+ "settings": {
+  "tool": "box",
+  "colour_name": "red",
+  "width": 1,
+  "jump": true,
+  "hover_inspect": true,
+  "number_marks": true,
+  "show_comments": true,
+  "keep_task": false,
+  "appearance": "dark",
+  "accent": "blue",
+  "recent_notes": [
+   "close the gap at the core",
+   "bay 5 is missing its glass"
+  ]
+ },
+ "categories": [
+  {
+   "id": "general",
+   "label": "General",
+   "icon": "sparkle",
+   "example": "Ask Claude about this view",
+   "drop": ""
+  },
+  {
+   "id": "model",
+   "label": "Model",
+   "icon": "cube",
+   "example": "e.g.  add a window like R1 between pins 1 and 4, sill at 900",
+   "drop": "images, preset .json"
+  },
+  {
+   "id": "fix",
+   "label": "Fix",
+   "icon": "fix",
+   "example": "e.g.  gap here; this window is missing its glass and frame detail",
+   "drop": ""
+  },
+  {
+   "id": "materials",
+   "label": "Materials",
+   "icon": "swatch",
+   "example": "e.g.  timber on box 1, concrete below, glass in the openings",
+   "drop": "photos, .vrmat, preset .json"
+  },
+  {
+   "id": "lighting",
+   "label": "Lighting",
+   "icon": "sun",
+   "example": "e.g.  late afternoon from the west, warm glow from the gallery inside",
+   "drop": "photos, .hdr or .exr, preset .json"
+  },
+  {
+   "id": "render",
+   "label": "Render",
+   "icon": "camera",
+   "example": "e.g.  this view for the A3 board, eye level, people in the yard",
+   "drop": "renders you like, .vrscene, .json"
+  },
+  {
+   "id": "analyse",
+   "label": "Analyse",
+   "icon": "chart",
+   "example": "e.g.  section along the line looking north; sun hours on box 2 in June",
+   "drop": "a drawing style to copy, .json"
+  },
+  {
+   "id": "critique",
+   "label": "Critique",
+   "icon": "crit",
+   "example": "e.g.  the roof reads as one gesture from the lake path",
+   "drop": "a precedent to test against, .json"
+  }
+ ],
+ "presets": {
+  "model": [
+   {
+    "id": "model/keep-site-layer.json",
+    "name": "Never touch SITE",
+    "summary": "Leave the SITE layers alone",
+    "category": "model",
+    "builtin": false,
+    "instructions": "Never move, edit or delete anything on a SITE layer."
+   }
+  ],
+  "materials": [],
+  "lighting": [],
+  "fix": [],
+  "general": [],
+  "render": [
+   {
+    "id": "render/board-render.json",
+    "name": "Board render",
+    "summary": "V-Ray, 4961 x 3508, final",
+    "kind": "setup",
+    "category": "render",
+    "builtin": false,
+    "options": {
+     "make": "render",
+     "engine": "vray",
+     "size": "a3",
+     "orient": "land",
+     "quality": "final",
+     "denoise": true,
+     "camera": "two_point",
+     "lens": "24",
+     "light": "keep",
+     "look": "materials",
+     "people": "few",
+     "bg": "sky",
+     "format": "jpg",
+     "save": "doc",
+     "open": true
+    }
+   }
+  ],
+  "analyse": [],
+  "critique": []
+ },
+ "terminals": [
+  {
+   "hwnd": 4101,
+   "title": "Lakeside pavilion: model fixes",
+   "claude": true,
+   "kind": "Windows Terminal"
+  },
+  {
+   "hwnd": 4102,
+   "title": "Lakeside pavilion: renders",
+   "claude": true,
+   "kind": "Windows Terminal"
+  },
+  {
+   "hwnd": 4103,
+   "title": "Competition boards",
+   "claude": true,
+   "kind": "Windows Terminal"
+  },
+  {
+   "hwnd": 4104,
+   "title": "Site model cleanup",
+   "claude": true,
+   "kind": "Windows Terminal"
+  }
+ ],
+ "target": 4101,
+ "queue": [],
+ "pending_reply": null,
+ "drafts": [],
+ "sample_reply": {
+  "title": "Critic: the core and the glass",
+  "reply_to": "20261107-101200",
+  "strokes": [
+   {
+    "colour": "claude",
+    "by": "claude",
+    "kind": "pen",
+    "points": [
+     [
+      1313.2,
+      449.4
+     ],
+     [
+      1313.2,
+      172
+     ]
+    ],
+    "rgb": [
+     217,
+     119,
+     87
+    ],
+    "width": 3
+   },
+   {
+    "colour": "claude",
+    "by": "claude",
+    "kind": "text",
+    "points": [
+     [
+      1120,
+      150
+     ]
+    ],
+    "rgb": [
+     217,
+     119,
+     87
+    ],
+    "width": 6,
+    "text": "C1  core stops 600 mm short of the roof",
+    "font_px": 30.0,
+    "size": [
+     520,
+     44
+    ]
+   },
+   {
+    "colour": "claude",
+    "by": "claude",
+    "kind": "pin",
+    "points": [
+     [
+      1313.2,
+      449.4
+     ]
+    ],
+    "rgb": [
+     217,
+     119,
+     87
+    ],
+    "width": 6,
+    "label": "C1"
+   },
+   {
+    "colour": "claude",
+    "by": "claude",
+    "kind": "pen",
+    "points": [
+     [
+      996.4,
+      536.1
+     ],
+     [
+      996.4,
+      842
+     ]
+    ],
+    "rgb": [
+     217,
+     119,
+     87
+    ],
+    "width": 3
+   },
+   {
+    "colour": "claude",
+    "by": "claude",
+    "kind": "text",
+    "points": [
+     [
+      560,
+      820
+     ]
+    ],
+    "rgb": [
+     217,
+     119,
+     87
+    ],
+    "width": 6,
+    "text": "C2  bay S5 has no glass",
+    "font_px": 30.0,
+    "size": [
+     520,
+     44
+    ]
+   },
+   {
+    "colour": "claude",
+    "by": "claude",
+    "kind": "pin",
+    "points": [
+     [
+      996.4,
+      536.1
+     ]
+    ],
+    "rgb": [
+     217,
+     119,
+     87
+    ],
+    "width": 6,
+    "label": "C2"
+   }
+  ],
+  "summary": "Two modelling faults: the service core does not reach the soffit, and bay S5 on the south face has no pane."
+ },
+ "sample_options": {
+  "title": "Options for the roof",
+  "reply_to": "20261107-101200",
+  "strokes": [],
+  "options": [
+   {
+    "label": "A",
+    "title": "Deep eave",
+    "idea": "the south edge pulled out 2.4 m for shade",
+    "url": "../mock/option_A.jpg"
+   },
+   {
+    "label": "B",
+    "title": "Oak roof",
+    "idea": "the whole lid in oak, warm from below",
+    "url": "../mock/option_B.jpg"
+   },
+   {
+    "label": "C",
+    "title": "Dark steel lid",
+    "idea": "a blackened steel roof over the glass",
+    "url": "../mock/option_C.jpg"
+   }
+  ]
+ },
+ "env": {
+  "rhino": "Rhino 8",
+  "vray": "V-Ray 7",
+  "units": "Millimeters",
+  "layer": "PAVILION::GLAZING",
+  "doc_dir": "C:\\Users\\you\\Projects\\Lakeside Pavilion",
+  "render_dir": "C:\\Users\\you\\Projects\\Lakeside Pavilion\\Renders",
+  "named_views": [
+   "Approach",
+   "Aerial",
+   "Deck",
+   "Lake"
+  ],
+  "sun": {
+   "lat": -33.87,
+   "lon": 151.21,
+   "enabled": true
+  },
+  "cosmos": {
+   "root": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages",
+   "materials": 16,
+   "hdris": 0,
+   "people": 0
+  }
+ },
+ "notes": {
+  "render_note": "Set everything up over the MCP, then render it with V-Ray yourself: set /SettingsOutput img_dir + img_file, call rhVRay.Render, wait for the file, then clear the path (notes/RHINO-VRAY-NOTES.md section vray-render-over-mcp). It renders the active viewport, so restore the named view first. If your VFB colour filters are on, the .denoiser.png is the clean image."
+ },
+ "text": {
+  "reply": [
+   "Answer Claude",
+   "e.g.  C1 yes, run it up to the soffit; C2 glaze it to match"
+  ],
+  "options": [
+   "Pick an option",
+   "e.g.  B, but keep A's deep eave on the south"
+  ],
+  "style": [
+   "Pick a look",
+   "e.g.  A, but warmer here and with B's sky; less haze"
+  ]
+ },
+ "mock_hits": [
+  {
+   "r": [
+    878.8,
+    611.4,
+    891.7,
+    638.8
+   ],
+   "id": "6bd3d8fc-f0a7-46be-9402-103c27a3b1c5",
+   "type": "Polysurface",
+   "name": "Bench leg",
+   "layer": "PAVILION::FURNITURE"
+  },
+  {
+   "r": [
+    632.1,
+    637.9,
+    645.4,
+    674.0
+   ],
+   "id": "61faaf21-5390-4d87-b641-932d766d7be3",
+   "type": "Polysurface",
+   "name": "Bench leg",
+   "layer": "PAVILION::FURNITURE"
+  },
+  {
+   "r": [
+    584.2,
+    626.8,
+    595.6,
+    659.2
+   ],
+   "id": "6eecff61-fe67-4cf4-9b9e-b8c1099b7054",
+   "type": "Polysurface",
+   "name": "Bench leg",
+   "layer": "PAVILION::FURNITURE"
+  },
+  {
+   "r": [
+    945.1,
+    619.4,
+    960.0,
+    649.3
+   ],
+   "id": "13349066-b00f-4905-bb0b-c469f1fccad7",
+   "type": "Polysurface",
+   "name": "Bench leg",
+   "layer": "PAVILION::FURNITURE"
+  },
+  {
+   "r": [
+    1915.9,
+    332.7,
+    1920.0,
+    438.1
+   ],
+   "id": "ea5ec588-84b9-47ab-8cb7-f100e1dfae3b",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    1103.2,
+    423.2,
+    1109.2,
+    644.1
+   ],
+   "id": "9989a23d-697a-403f-aff1-1064fd8b7691",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    1053.1,
+    428.2,
+    1058.6,
+    637.7
+   ],
+   "id": "28e3c8cb-11c7-4d50-94e8-b3af15f9cb02",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    609.6,
+    425.3,
+    615.7,
+    641.5
+   ],
+   "id": "3dbe4639-4322-4ab7-96e0-4b023fbac6cc",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    683.0,
+    428.8,
+    688.7,
+    637.0
+   ],
+   "id": "53785b7e-a692-44de-9d05-4e93a9ef6850",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    1008.0,
+    432.8,
+    1013.0,
+    632.0
+   ],
+   "id": "09969e51-c2d7-4c6b-91c1-3948531d0c1b",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    751.2,
+    432.1,
+    756.6,
+    632.9
+   ],
+   "id": "0d547629-e53c-409a-825c-26c89e2d17ce",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    814.8,
+    435.1,
+    819.8,
+    629.1
+   ],
+   "id": "f67b93a3-6ac9-4a7f-ac4b-554cdf1bc823",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    967.0,
+    436.9,
+    971.7,
+    626.8
+   ],
+   "id": "9aa42a1d-15c9-4d1c-aa3a-904fd4f0a4bf",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    874.1,
+    438.0,
+    878.9,
+    625.5
+   ],
+   "id": "379fc5ef-93e4-42ae-a6c8-909190af0bdc",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    929.6,
+    440.6,
+    934.1,
+    622.1
+   ],
+   "id": "38ad8f0a-5b26-4976-bd02-7c54feb85444",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    929.6,
+    440.6,
+    934.1,
+    622.1
+   ],
+   "id": "888d708f-fdff-4159-ac0b-fe1416f17439",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    683.8,
+    383.5,
+    692.3,
+    694.0
+   ],
+   "id": "9da4aa99-b906-455e-8abf-b39688d15e9d",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    783.7,
+    390.6,
+    791.5,
+    685.0
+   ],
+   "id": "4842747a-e7a9-41d5-b252-64f1c0a07522",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    539.1,
+    386.3,
+    547.9,
+    690.4
+   ],
+   "id": "ce2f702a-f07d-4e53-886e-0b78927ec09f",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    873.8,
+    397.1,
+    880.9,
+    676.9
+   ],
+   "id": "5064ec23-4b9c-45f0-81e2-b28b1cb50589",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    955.3,
+    402.9,
+    961.9,
+    669.6
+   ],
+   "id": "3ee87b45-d990-4b38-bd98-9643cd02363a",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    510.5,
+    395.7,
+    518.8,
+    678.6
+   ],
+   "id": "c67d38f6-252c-4b5e-90d1-1ea19a1cf442",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    1029.3,
+    408.3,
+    1035.9,
+    662.9
+   ],
+   "id": "07ebaeb8-b4a5-4dc1-b8a9-6a172876f6b5",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    599.4,
+    608.3,
+    627.2,
+    668.4
+   ],
+   "id": "6d0e938a-ab31-487b-9b67-73a7f947442c",
+   "type": "Polysurface",
+   "name": "Table leg",
+   "layer": "PAVILION::FURNITURE"
+  },
+  {
+   "r": [
+    485.7,
+    403.9,
+    493.5,
+    668.4
+   ],
+   "id": "d7331c36-b412-44e0-bb8b-b23cf3422c01",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    1096.9,
+    413.1,
+    1103.5,
+    656.7
+   ],
+   "id": "8b289368-91d5-4409-bc3b-8cb6921448a3",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    1158.9,
+    417.6,
+    1165.5,
+    651.1
+   ],
+   "id": "898bff73-80b6-4c88-b38e-836c39163f04",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    1158.9,
+    417.6,
+    1165.5,
+    651.1
+   ],
+   "id": "e5923752-cd7b-4d0f-8c65-9eb9390c78dd",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    463.8,
+    411.0,
+    471.2,
+    659.4
+   ],
+   "id": "db879d61-6a72-4ad4-84cc-50b6507942c9",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    900.7,
+    595.2,
+    934.7,
+    645.4
+   ],
+   "id": "de8ab21e-5f59-4815-91ab-d540e3d1cd7f",
+   "type": "Polysurface",
+   "name": "Table leg",
+   "layer": "PAVILION::FURNITURE"
+  },
+  {
+   "r": [
+    444.5,
+    417.3,
+    451.5,
+    651.4
+   ],
+   "id": "1b69f9ef-09eb-4634-b17b-8307bb321d22",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    444.5,
+    417.3,
+    451.5,
+    651.4
+   ],
+   "id": "21c4020e-8cab-478e-8752-009e73daf616",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    530.3,
+    421.5,
+    536.9,
+    646.2
+   ],
+   "id": "da3bc5ee-3716-4cfa-ab6f-e08dda82ff6f",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    646.8,
+    430.9,
+    660.4,
+    634.4
+   ],
+   "id": "d2188cb5-67d5-4b69-be66-9733518921dc",
+   "type": "Polysurface",
+   "name": "Column B2",
+   "layer": "PAVILION::COLUMNS"
+  },
+  {
+   "r": [
+    834.8,
+    439.6,
+    846.9,
+    623.5
+   ],
+   "id": "63c8515a-9abe-47e1-b519-b853ff835069",
+   "type": "Polysurface",
+   "name": "Column B3",
+   "layer": "PAVILION::COLUMNS"
+  },
+  {
+   "r": [
+    1582.6,
+    430.1,
+    1594.1,
+    635.4
+   ],
+   "id": "88abb93d-dcdf-49dc-8273-61e47ada1451",
+   "type": "Polysurface",
+   "name": "Fin 1",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1564.5,
+    431.2,
+    1575.9,
+    633.9
+   ],
+   "id": "d92f9194-ea5e-4a4b-bd3f-46fc4de56ea9",
+   "type": "Polysurface",
+   "name": "Fin 2",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1546.9,
+    432.3,
+    1558.2,
+    632.6
+   ],
+   "id": "e6e8ffbf-8d71-41d9-8750-356749d00ac6",
+   "type": "Polysurface",
+   "name": "Fin 3",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1529.7,
+    433.4,
+    1540.9,
+    631.2
+   ],
+   "id": "2f087b49-ed1b-4e52-bd3e-a13633d66c93",
+   "type": "Polysurface",
+   "name": "Fin 4",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1512.9,
+    434.5,
+    1524.0,
+    629.9
+   ],
+   "id": "90444673-c3d9-41f5-910e-8637fb24db06",
+   "type": "Polysurface",
+   "name": "Fin 5",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1496.5,
+    435.5,
+    1507.6,
+    628.6
+   ],
+   "id": "8a556c19-a924-4a9c-af92-027e11f3b24b",
+   "type": "Polysurface",
+   "name": "Fin 6",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1480.5,
+    436.5,
+    1491.5,
+    627.3
+   ],
+   "id": "e37fe514-5190-452d-8007-815c75bb8a25",
+   "type": "Polysurface",
+   "name": "Fin 7",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1464.9,
+    437.5,
+    1475.7,
+    626.1
+   ],
+   "id": "5e89828c-cdc0-4a81-b9ed-792047fdba4a",
+   "type": "Polysurface",
+   "name": "Fin 8",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1449.6,
+    438.4,
+    1460.4,
+    624.9
+   ],
+   "id": "8ea5f4b4-52b0-4f1e-b91b-b33e6dac250c",
+   "type": "Polysurface",
+   "name": "Fin 9",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1434.7,
+    439.4,
+    1445.3,
+    623.7
+   ],
+   "id": "c8d362e1-5e21-46af-b2f6-737e49fb9443",
+   "type": "Polysurface",
+   "name": "Fin 10",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1420.1,
+    440.3,
+    1430.7,
+    622.6
+   ],
+   "id": "8e0add4f-628c-469f-aa45-e7040191cb05",
+   "type": "Polysurface",
+   "name": "Fin 11",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1405.8,
+    441.2,
+    1416.3,
+    621.4
+   ],
+   "id": "d16d98ae-887c-4393-8fd6-6241ef821b69",
+   "type": "Polysurface",
+   "name": "Fin 12",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    989.8,
+    446.7,
+    1000.9,
+    614.4
+   ],
+   "id": "721e5ef8-a834-4d66-9532-b35c3ff8987f",
+   "type": "Polysurface",
+   "name": "Column B4",
+   "layer": "PAVILION::COLUMNS"
+  },
+  {
+   "r": [
+    1391.8,
+    442.0,
+    1402.3,
+    620.3
+   ],
+   "id": "93155c67-7331-4aca-a3f9-f297f391a192",
+   "type": "Polysurface",
+   "name": "Fin 13",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1378.1,
+    442.9,
+    1388.5,
+    619.3
+   ],
+   "id": "491ac777-c241-4f76-95f1-85b9df1e1b6b",
+   "type": "Polysurface",
+   "name": "Fin 14",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1364.8,
+    443.7,
+    1375.1,
+    618.2
+   ],
+   "id": "2dca126f-3986-4da0-be0b-c39bc7f474cd",
+   "type": "Polysurface",
+   "name": "Fin 15",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1351.7,
+    444.5,
+    1361.9,
+    617.2
+   ],
+   "id": "201eef69-03e6-424d-8bb9-44a115150a75",
+   "type": "Polysurface",
+   "name": "Fin 16",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1338.9,
+    445.3,
+    1349.0,
+    616.2
+   ],
+   "id": "8210c02d-fbac-4cc5-a13c-50996171bff3",
+   "type": "Polysurface",
+   "name": "Fin 17",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1326.3,
+    446.1,
+    1336.4,
+    615.2
+   ],
+   "id": "c35202ec-bf20-44ce-9252-81bda6097a8f",
+   "type": "Polysurface",
+   "name": "Fin 18",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1314.0,
+    446.9,
+    1324.0,
+    614.2
+   ],
+   "id": "e70d0854-7d02-4456-9501-02b6e5598ceb",
+   "type": "Polysurface",
+   "name": "Fin 19",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1302.0,
+    447.7,
+    1311.9,
+    613.3
+   ],
+   "id": "1b3e8d1a-38eb-43b0-ba69-7f49e68a2093",
+   "type": "Polysurface",
+   "name": "Fin 20",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1290.2,
+    448.4,
+    1300.0,
+    612.3
+   ],
+   "id": "15ce23ed-8ca3-40e1-bdfd-7a569317ab51",
+   "type": "Polysurface",
+   "name": "Fin 21",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1278.6,
+    449.1,
+    1288.4,
+    611.4
+   ],
+   "id": "f236e907-5408-4475-a814-704deac49b57",
+   "type": "Polysurface",
+   "name": "Fin 22",
+   "layer": "PAVILION::FINS"
+  },
+  {
+   "r": [
+    1119.6,
+    452.7,
+    1130.3,
+    606.9
+   ],
+   "id": "ef09869e-b382-4977-87ba-304a175dfe37",
+   "type": "Polysurface",
+   "name": "Column B5",
+   "layer": "PAVILION::COLUMNS"
+  },
+  {
+   "r": [
+    1571.9,
+    485.3,
+    1589.3,
+    595.8
+   ],
+   "id": "4edcb4f8-b70c-4727-85da-4c2fb49cea7a",
+   "type": "Mesh",
+   "name": "Tree trunk",
+   "layer": "SITE::TRUNKS"
+  },
+  {
+   "r": [
+    572.3,
+    375.5,
+    581.7,
+    704.1
+   ],
+   "id": "78bb8e44-81d9-48fc-aaf7-60d0d84b0b78",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    572.3,
+    375.5,
+    581.7,
+    704.1
+   ],
+   "id": "3df25683-ad25-4056-99b9-469598e4b5c3",
+   "type": "Polysurface",
+   "name": "",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    1116.0,
+    406.9,
+    1133.8,
+    664.5
+   ],
+   "id": "07aad31e-6afc-45a4-8937-ec0ef7e35af1",
+   "type": "Polysurface",
+   "name": "Column A3",
+   "layer": "PAVILION::COLUMNS"
+  },
+  {
+   "r": [
+    447.2,
+    411.3,
+    468.4,
+    659.0
+   ],
+   "id": "84f32193-a8d6-45cd-841f-e458668c1b1b",
+   "type": "Surface",
+   "name": "Glass W5",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    1291.7,
+    420.5,
+    1308.3,
+    647.5
+   ],
+   "id": "c45f7557-4896-4961-8f0d-e282ba113829",
+   "type": "Polysurface",
+   "name": "Column A4",
+   "layer": "PAVILION::COLUMNS"
+  },
+  {
+   "r": [
+    414.2,
+    420.1,
+    429.6,
+    648.0
+   ],
+   "id": "b71fdb19-1f2d-4c1d-8cab-f227695baca9",
+   "type": "Polysurface",
+   "name": "Column B1",
+   "layer": "PAVILION::COLUMNS"
+  },
+  {
+   "r": [
+    1430.3,
+    431.2,
+    1445.8,
+    634.0
+   ],
+   "id": "9bf7f391-3409-4328-b510-75b60a93f22e",
+   "type": "Polysurface",
+   "name": "Column A5",
+   "layer": "PAVILION::COLUMNS"
+  },
+  {
+   "r": [
+    1742.6,
+    435.0,
+    1766.0,
+    616.4
+   ],
+   "id": "2d3cea47-99f4-4f77-860d-5bd5131ce4ad",
+   "type": "Mesh",
+   "name": "Tree trunk",
+   "layer": "SITE::TRUNKS"
+  },
+  {
+   "r": [
+    1896.4,
+    345.7,
+    1920.0,
+    478.0
+   ],
+   "id": "4cae149a-28b1-4a17-8f84-c30fcaa9ee87",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    570.3,
+    364.6,
+    593.9,
+    717.7
+   ],
+   "id": "e825e4aa-d437-4a0e-8e23-33c56e989591",
+   "type": "Polysurface",
+   "name": "Column A1",
+   "layer": "PAVILION::COLUMNS"
+  },
+  {
+   "r": [
+    542.6,
+    376.0,
+    577.9,
+    703.4
+   ],
+   "id": "9101bf56-1595-4f41-9a3d-036ecf0a912b",
+   "type": "Surface",
+   "name": "Glass W1",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    885.8,
+    389.1,
+    905.3,
+    687.0
+   ],
+   "id": "f30d186a-25ad-466b-b9d5-067763bcd395",
+   "type": "Polysurface",
+   "name": "Column A2",
+   "layer": "PAVILION::COLUMNS"
+  },
+  {
+   "r": [
+    513.8,
+    386.8,
+    544.4,
+    689.9
+   ],
+   "id": "3eda9b05-3621-4a08-aab3-eacf1ee0a439",
+   "type": "Surface",
+   "name": "Glass W2",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    1098.9,
+    687.7,
+    1326.7,
+    731.9
+   ],
+   "id": "434380f6-c774-4965-b57f-489c8e734b3b",
+   "type": "Polysurface",
+   "name": "Step 2",
+   "layer": "PAVILION::STAIR"
+  },
+  {
+   "r": [
+    488.7,
+    396.1,
+    515.6,
+    678.2
+   ],
+   "id": "e68183de-a583-4a4c-a9c1-d9a69cfef0d0",
+   "type": "Surface",
+   "name": "Glass W3",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    618.0,
+    616.0,
+    970.4,
+    641.2
+   ],
+   "id": "f8d054a9-8380-4344-af1e-feb8d848a3d3",
+   "type": "Polysurface",
+   "name": "Bench",
+   "layer": "PAVILION::FURNITURE"
+  },
+  {
+   "r": [
+    466.7,
+    404.2,
+    490.4,
+    668.0
+   ],
+   "id": "6a80a28f-ac8a-4d96-817f-a5e156893f6f",
+   "type": "Surface",
+   "name": "Glass W4",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    585.6,
+    592.1,
+    946.3,
+    613.5
+   ],
+   "id": "99710748-9179-4d0a-8538-7b0846ac50da",
+   "type": "Polysurface",
+   "name": "Table top",
+   "layer": "PAVILION::FURNITURE"
+  },
+  {
+   "r": [
+    571.2,
+    608.4,
+    901.6,
+    629.5
+   ],
+   "id": "ea1f0f87-a615-426e-ba08-4dedcdde09a2",
+   "type": "Polysurface",
+   "name": "Bench",
+   "layer": "PAVILION::FURNITURE"
+  },
+  {
+   "r": [
+    1055.7,
+    423.4,
+    1106.4,
+    643.8
+   ],
+   "id": "cd2fa79d-f068-4c3e-b954-5ab8c83c32be",
+   "type": "Surface",
+   "name": "Glass E2",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    1010.4,
+    428.4,
+    1056.0,
+    637.5
+   ],
+   "id": "b395e52a-e649-4bce-b236-7130ef4b7194",
+   "type": "Surface",
+   "name": "Glass E3",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    969.3,
+    432.9,
+    1010.6,
+    631.8
+   ],
+   "id": "aae960da-8004-42d7-940d-c8fc2734cad5",
+   "type": "Surface",
+   "name": "Glass E4",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    817.1,
+    435.3,
+    876.6,
+    628.8
+   ],
+   "id": "5ac3d238-6e98-4071-bf82-79ef93ffa864",
+   "type": "Surface",
+   "name": "Glass N6",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    931.8,
+    437.0,
+    969.4,
+    626.6
+   ],
+   "id": "aecf4f54-7b01-4ce7-ba7d-9846a9acc2ff",
+   "type": "Surface",
+   "name": "Glass E5",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    876.4,
+    438.1,
+    931.9,
+    625.3
+   ],
+   "id": "41139046-3fb5-4417-a429-06cae2e42ae8",
+   "type": "Surface",
+   "name": "Glass N7",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    1877.9,
+    361.3,
+    1920.0,
+    517.4
+   ],
+   "id": "d43ee45f-2ae3-4207-ba16-1afa261e095e",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    877.2,
+    397.4,
+    958.6,
+    676.4
+   ],
+   "id": "03332beb-19fd-4b7c-95e7-6da1bdc1d783",
+   "type": "Surface",
+   "name": "Glass S4",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    1076.8,
+    673.3,
+    1302.7,
+    727.0
+   ],
+   "id": "56f71114-a7ec-4d6a-aac6-44c961258edd",
+   "type": "Polysurface",
+   "name": "Step 1",
+   "layer": "PAVILION::STAIR"
+  },
+  {
+   "r": [
+    1032.4,
+    408.6,
+    1100.4,
+    662.5
+   ],
+   "id": "a219f8ed-989c-498e-8f95-98c2aed8d6a5",
+   "type": "Surface",
+   "name": "Glass S6",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    1099.9,
+    413.4,
+    1162.5,
+    656.4
+   ],
+   "id": "9969c1a3-6e12-46a8-99f3-d1aa126d7a01",
+   "type": "Surface",
+   "name": "Glass S7",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    1105.9,
+    417.8,
+    1162.5,
+    650.8
+   ],
+   "id": "d0f5b0c2-3681-4511-8bfe-553b1365a45a",
+   "type": "Surface",
+   "name": "Glass E1",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    1584.6,
+    343.0,
+    1625.9,
+    656.3
+   ],
+   "id": "84458acf-fabe-4698-85ae-e4acb7ca1da4",
+   "type": "Mesh",
+   "name": "Tree trunk",
+   "layer": "SITE::TRUNKS"
+  },
+  {
+   "r": [
+    447.2,
+    417.6,
+    534.3,
+    651.1
+   ],
+   "id": "09c1bdb7-4065-49b6-82b2-1ab4a5f3cb12",
+   "type": "Surface",
+   "name": "Glass N1",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    532.9,
+    421.7,
+    613.2,
+    646.0
+   ],
+   "id": "88b06103-bad7-4904-9c0e-4667ed30d9d9",
+   "type": "Surface",
+   "name": "Glass N2",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    612.1,
+    425.5,
+    686.3,
+    641.2
+   ],
+   "id": "4246a0e4-257c-43a8-a43f-d83322dd5717",
+   "type": "Surface",
+   "name": "Glass N3",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    685.5,
+    429.0,
+    754.2,
+    636.8
+   ],
+   "id": "7bfc691e-87a9-49ed-86f4-6104fb2791b0",
+   "type": "Surface",
+   "name": "Glass N4",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    446.7,
+    417.4,
+    932.7,
+    445.7
+   ],
+   "id": "e4cf6484-d14f-410b-9347-db0b3e350364",
+   "type": "Polysurface",
+   "name": "Head rail N",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    753.6,
+    432.3,
+    817.5,
+    632.7
+   ],
+   "id": "6b35046d-cbd6-40db-8a29-c7319bcf92a3",
+   "type": "Surface",
+   "name": "Glass N5",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    1866.7,
+    189.9,
+    1920.0,
+    497.8
+   ],
+   "id": "dcaae014-3c98-48fd-b12c-b5ba73b65480",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    1486.1,
+    356.9,
+    1654.3,
+    460.1
+   ],
+   "id": "d4e18748-f37d-4ea6-b265-a67d63583226",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    576.1,
+    376.0,
+    688.7,
+    703.4
+   ],
+   "id": "cded98d1-33f2-4a50-96c9-2ebccd687fdb",
+   "type": "Surface",
+   "name": "Glass S1",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    687.5,
+    383.9,
+    788.0,
+    693.5
+   ],
+   "id": "7cabbade-f967-4dd3-83a2-20fe3bd84bb4",
+   "type": "Surface",
+   "name": "Glass S2",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    787.3,
+    391.0,
+    877.5,
+    684.5
+   ],
+   "id": "a1fa926b-1b3f-42de-9272-c5b98b5d6e06",
+   "type": "Surface",
+   "name": "Glass S3",
+   "layer": "PAVILION::GLAZING"
+  },
+  {
+   "r": [
+    575.2,
+    375.7,
+    1164.0,
+    424.1
+   ],
+   "id": "6355af65-78e9-440f-afac-5c5d7653f014",
+   "type": "Polysurface",
+   "name": "Head rail S",
+   "layer": "PAVILION::MULLIONS"
+  },
+  {
+   "r": [
+    1467.8,
+    368.4,
+    1689.5,
+    499.9
+   ],
+   "id": "f906c425-0e4f-4be3-ab64-490b4b7528f8",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    1442.0,
+    388.2,
+    1707.6,
+    543.8
+   ],
+   "id": "04dfd4d9-eb14-4f9b-9316-8f4b565ebb55",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    1084.8,
+    464.7,
+    1369.6,
+    639.0
+   ],
+   "id": "8f6acbc7-16c8-432d-a926-ec15acbecba2",
+   "type": "Polysurface",
+   "name": "Service core",
+   "layer": "PAVILION::CORE"
+  },
+  {
+   "r": [
+    27.1,
+    390.5,
+    1171.4,
+    454.5
+   ],
+   "id": "efc835c6-629e-426a-b17c-3e72d82eaa76",
+   "type": "Polysurface",
+   "name": "Fascia N",
+   "layer": "PAVILION::ROOF"
+  },
+  {
+   "r": [
+    1795.8,
+    139.4,
+    1920.0,
+    574.8
+   ],
+   "id": "cd3387a0-c89c-4ba5-9a99-2ee55dca2b05",
+   "type": "Polysurface",
+   "name": "Lake edge",
+   "layer": "PAVILION::DECK"
+  },
+  {
+   "r": [
+    1625.0,
+    212.1,
+    1899.6,
+    398.0
+   ],
+   "id": "9bb88597-c65d-4433-97d4-71c0f9d39926",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    1553.4,
+    242.9,
+    1894.0,
+    462.3
+   ],
+   "id": "04b02de9-34ce-46d0-8465-29819ed7445d",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    1341.3,
+    701.8,
+    1748.6,
+    1024.8
+   ],
+   "id": "6f7b54bd-7a94-4490-b560-a28ee6bfd794",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    1523.0,
+    268.0,
+    1920.0,
+    520.6
+   ],
+   "id": "32c4f49a-9c97-482b-9594-a1b4b5d180cc",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    1320.4,
+    522.9,
+    1920.0,
+    987.3
+   ],
+   "id": "6b69935c-e31f-4abf-bfaa-3d307b415cfc",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    1375.0,
+    609.4,
+    1906.2,
+    1001.5
+   ],
+   "id": "d46ed02a-c8f0-4f82-b683-266c149fc65f",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    186.1,
+    591.1,
+    1587.2,
+    830.0
+   ],
+   "id": "d36f9be7-cca1-4018-9a40-bcbd365a8aa6",
+   "type": "Polysurface",
+   "name": "Deck slab",
+   "layer": "PAVILION::DECK"
+  },
+  {
+   "r": [
+    0.0,
+    128.8,
+    1787.9,
+    415.6
+   ],
+   "id": "e400c400-363a-4131-9ed9-b7d21459d9b0",
+   "type": "Polysurface",
+   "name": "Fascia S",
+   "layer": "PAVILION::ROOF"
+  },
+  {
+   "r": [
+    0.0,
+    360.6,
+    1356.6,
+    738.1
+   ],
+   "id": "b467d623-e0fc-4534-a103-4df53c3a62d2",
+   "type": "Polysurface",
+   "name": "Approach path",
+   "layer": "SITE::PATH"
+  },
+  {
+   "r": [
+    0.0,
+    161.3,
+    1787.8,
+    465.0
+   ],
+   "id": "547501a4-f252-414a-a921-a94c304894a7",
+   "type": "Polysurface",
+   "name": "Roof slab",
+   "layer": "PAVILION::ROOF"
+  },
+  {
+   "r": [
+    0.0,
+    146.5,
+    1920.0,
+    620.7
+   ],
+   "id": "6243e79a-b125-4bd0-a0c7-aa6735edd44b",
+   "type": "Surface",
+   "name": "Lake",
+   "layer": "SITE::WATER"
+  },
+  {
+   "r": [
+    0.0,
+    0.0,
+    1920.0,
+    1080.0
+   ],
+   "id": "bbb829af-4280-427d-867a-ab54efca2ab0",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    0.0,
+    0.0,
+    1920.0,
+    1080.0
+   ],
+   "id": "6f42b992-7490-4349-a1e2-c52ad4244052",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    0.0,
+    0.0,
+    1920.0,
+    1080.0
+   ],
+   "id": "a1f41205-7f16-4a4d-84d5-0970f9e906c2",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    0.0,
+    0.0,
+    1920.0,
+    1080.0
+   ],
+   "id": "3fd5930b-8e7e-4cb6-9350-be6a7f7f19e0",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    0.0,
+    0.0,
+    1920.0,
+    1080.0
+   ],
+   "id": "ef2d9330-08a7-4855-85c6-18ebac6aef08",
+   "type": "Mesh",
+   "name": "Tree canopy",
+   "layer": "SITE::TREES"
+  },
+  {
+   "r": [
+    1466.0,
+    207.0,
+    1920.0,
+    684.5
+   ],
+   "id": "143c89f1-4f01-443a-9c78-9cfbeea22bf0",
+   "type": "Surface",
+   "name": "Meadow",
+   "layer": "SITE::GROUND"
+  }
+ ],
+ "mock_measures": [
+  {
+   "a": [
+    899.4,
+    686.4
+   ],
+   "b": [
+    899.2,
+    389.5
+   ],
+   "value": 3400.0,
+   "units": "mm",
+   "text": "3.40 m"
+  }
+ ]
+}

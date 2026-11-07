@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClaudeMark</title>
+<script>
+  (function () {
+    var v = (location.search.match(/[?&]v=([^&]+)/) || [])[1] || String(Date.now());
+    window.CM_VERSION = v;
+    document.write('<link rel="stylesheet" href="app.css?v=' + v + '">');
+  })();
+</script>
+</head>
+<body class="boot">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Liquid Glass lensing: a low-frequency displacement of what lies under the glass -->
+    <filter id="lg-refract" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.0065 0.009" numOctaves="2" seed="11" result="n"/>
+      <feGaussianBlur in="n" stdDeviation="2.5" result="nb"/>
+      <feDisplacementMap in="SourceGraphic" in2="nb" scale="30" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <symbol id="i-select" viewBox="0 0 24 24"><path d="M6.5 3.5l11 9.6-5.2.6 3 5.9-2.3 1.2-3-5.9-3.5 3.6z"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M15.2 4.6l4.2 4.2L8.7 19.5l-5 .9.9-5z"/><path d="M13.2 6.6l4.2 4.2"/></symbol>
+    <symbol id="i-marker" viewBox="0 0 24 24"><path d="M8.6 14.9l-3 3 1.9 1.9 3-3"/><path d="M8.6 14.9L16.4 4.6a1.9 1.9 0 012.8-.2l.4.4a1.9 1.9 0 01-.2 2.8L9.1 15.4z"/><path d="M4 21.5h9" stroke-width="2.6" opacity=".55"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="13" rx="2.2"/></symbol>
+    <symbol id="i-ellipse" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="8.5" ry="6.6"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M6 8a2 2 0 014-1 2 2 0 014 0 2 2 0 014 1 2 2 0 011 4 2 2 0 01-1 4 2 2 0 01-4 1 2 2 0 01-4 0 2 2 0 01-4-1 2 2 0 01-1-4 2 2 0 011-4z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5.5 18.5L18.5 5.5"/><path d="M9.5 5.5h9v9"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0113 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path d="M5.5 7V5h13v2"/><path d="M12 5v14"/><path d="M9 19h6"/></symbol>
+    <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M3.5 16.5L16.5 3.5l4 4-13 13z"/><path d="M7.2 12.8L9 14.6M10.2 9.8l1.8 1.8M13.2 6.8L15 8.6"/></symbol>
+    <symbol id="i-eraser" viewBox="0 0 24 24"><path d="M9 20h11"/><path d="M4.7 14.4l8.9-8.9a2 2 0 012.8 0l3.1 3.1a2 2 0 010 2.8L12 19.9H8.7l-4-4a1 1 0 010-1.5z"/><path d="M9.4 9.8l5.3 5.3"/></symbol>
+    <symbol id="i-match" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/><path d="M12 2.5v4.5M12 17v4.5M2.5 12H7M17 12h4.5"/></symbol>
+    <symbol id="i-more" viewBox="0 0 24 24"><path d="M6 12h.01M12 12h.01M18 12h.01" stroke-width="3.2"/></symbol>
+    <symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 14.5l-5-5 5-5"/><path d="M4 9.5h10.2a5.3 5.3 0 010 10.6H11"/></symbol>
+    <symbol id="i-redo" viewBox="0 0 24 24"><path d="M15 14.5l5-5-5-5"/><path d="M20 9.5H9.8a5.3 5.3 0 000 10.6H13"/></symbol>
+    <symbol id="i-sidebar" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="3.2"/><path d="M9.5 4.5v15"/><path d="M5.8 8.5h1.4M5.8 11h1.4" stroke-width="1.5"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9.5 7h10.5M9.5 12h10.5M9.5 17h10.5"/><path d="M4.6 7h.01M4.6 12h.01M4.6 17h.01" stroke-width="2.8"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.2"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h9.5M18.5 7H20M4 17h3.5M12.5 17H20"/><circle cx="16" cy="7" r="2.4"/><circle cx="10" cy="17" r="2.4"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="M9.6 9.4a2.5 2.5 0 014.8.9c0 1.7-2.4 2.1-2.4 3.6"/><path d="M12 17.1h.01" stroke-width="2.4"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 19V5.5M6.2 11.2L12 5.4l5.8 5.8"/></symbol>
+    <symbol id="i-stack" viewBox="0 0 24 24"><rect x="3.5" y="8.5" width="13" height="11.5" rx="2.6"/><path d="M7.5 5.5h10A2.5 2.5 0 0120 8v9.5"/><path d="M10 11.6v5.3M7.35 14.25h5.3"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M7.5 10l4.5 4.5 4.5-4.5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 7h15M10 11v6M14 11v6"/><path d="M6.5 7l.9 11.7A2 2 0 009.4 20.5h5.2a2 2 0 002-1.8L17.5 7"/><path d="M9.5 7V4.5h5V7"/></symbol>
+    <symbol id="i-comment" viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 01-11.2 6.5L4 19.5l1.5-4.3A7.5 7.5 0 1120 11.5z"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11.5" height="11.5" rx="2.6"/><path d="M15.5 8.5V6.6A2.1 2.1 0 0013.4 4.5H6.6A2.1 2.1 0 004.5 6.6v6.8a2.1 2.1 0 002.1 2.1h1.9"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2.6"/><circle cx="9" cy="10" r="1.6"/><path d="M20.5 15.2l-4.6-4.6-8.7 8.4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.8"/><path d="M12 2.8v2M12 19.2v2M2.8 12h2M19.2 12h2M5.5 5.5l1.4 1.4M17.1 17.1l1.4 1.4M5.5 18.5l1.4-1.4M17.1 6.9l1.4-1.4"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></symbol>
+    <symbol id="i-swatch" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 000 17z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8.6A2.5 2.5 0 016.5 6.1h1.7l1.5-2.1h4.6l1.5 2.1h1.7A2.5 2.5 0 0120 8.6v8a2.5 2.5 0 01-2.5 2.5h-11A2.5 2.5 0 014 16.6z"/><circle cx="12" cy="12.4" r="3.4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M7 16.5v-5M12 16.5v-10M17 16.5v-7.5"/></symbol>
+    <symbol id="i-crit" viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 01-11.2 6.5L4 19.5l1.5-4.3A7.5 7.5 0 1120 11.5z"/><path d="M12 8v4.2"/><path d="M12 15.1h.01" stroke-width="2.4"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3.5l1.8 5 5 1.8-5 1.8-1.8 5-1.8-5-5-1.8 5-1.8z"/><path d="M18 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></symbol>
+    <symbol id="i-fit" viewBox="0 0 24 24"><path d="M4 9V5.6A1.6 1.6 0 015.6 4H9M15 4h3.4A1.6 1.6 0 0120 5.6V9M20 15v3.4a1.6 1.6 0 01-1.6 1.6H15M9 20H5.6A1.6 1.6 0 014 18.4V15"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="3"/><path d="M7 9.5l3 2.5-3 2.5M12.5 15H17"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5"/><path d="M5 19.5h14"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3.5 7.5a2 2 0 012-2h4l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2h-13a2 2 0 01-2-2z"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 4.2l8.7 15.3H3.3z"/><path d="M12 10.2v4"/><path d="M12 17h.01" stroke-width="2.4"/></symbol>
+    <symbol id="i-reply" viewBox="0 0 24 24"><path d="M9.5 6L4 11.5 9.5 17"/><path d="M4 11.5h9.5a6.5 6.5 0 016.5 6.5v1"/></symbol>
+    <symbol id="i-front" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11" height="11" rx="2.2"/><path d="M5 15.5V6.2A1.2 1.2 0 016.2 5h9.3"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M3.5 3.5l17 17"/><path d="M10.4 5.7A9.4 9.4 0 0112 5.5c6 0 9.5 6.5 9.5 6.5a16.6 16.6 0 01-2.7 3.5M6.7 6.8A16 16 0 002.5 12S6 18.5 12 18.5a9.2 9.2 0 004.2-1"/><path d="M9.9 9.9a3 3 0 004.2 4.2"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M12.5 20H20"/><path d="M15.6 4.6a2.1 2.1 0 013 3L8 18.2l-4 1 1-4z"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h13.5M13 6.5l5.5 5.5-5.5 5.5"/></symbol>
+    <symbol id="i-paste" viewBox="0 0 24 24"><rect x="5" y="4.5" width="14" height="16" rx="2.6"/><path d="M9 4.5V3.5h6v1"/><path d="M9 10h6M9 14h4"/></symbol>
+    <symbol id="i-duplicate" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11.5" height="11.5" rx="2.6"/><path d="M15.5 8.5V6.6A2.1 2.1 0 0013.4 4.5H6.6A2.1 2.1 0 004.5 6.6v6.8a2.1 2.1 0 002.1 2.1h1.9"/><path d="M14.25 11.5v5.5M11.5 14.25h5.5"/></symbol>
+    <symbol id="i-fix" viewBox="0 0 24 24"><g transform="rotate(-45 12 12)"><rect x="2.5" y="8" width="19" height="8" rx="4"/><path d="M8.5 8v8M15.5 8v8"/><path d="M11 11h.01M13 11h.01M11 13h.01M13 13h.01" stroke-width="1.9"/></g></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 4l8.5 4.5L12 13 3.5 8.5z"/><path d="M3.5 12.5L12 17l8.5-4.5"/><path d="M3.5 16.5L12 21l8.5-4.5"/></symbol>
+  </defs>
+</svg>
+
+<div id="backdrop"></div>
+<div id="backdrop-tint"></div>
+<canvas id="canvas" tabindex="0" aria-label="Capture: draw your marks here"></canvas>
+
+<!-- top left: tasks panel, the document -->
+<div class="cluster tl chrome">
+  <div class="glass round"><button class="btn" id="sidebar-btn" data-tip="Task and presets" data-sub="What kind of job this is, and how you like it done"><svg class="ic"><use href="#i-sidebar"/></svg></button></div>
+  <div class="glass capsule" id="doc-info"></div>
+</div>
+
+<!-- top centre: tools -->
+<div class="glass capsule chrome" id="toolbar">
+  <div class="seg" id="tools"><div class="seg-thumb" id="tool-thumb"></div></div>
+  <div class="sep" id="sep-a"></div>
+  <div class="swatches" id="swatches"></div>
+  <button class="btn colour-pick hidden" id="colour-pick" data-tip="Colour" data-key="1-7"><i style="display:block;width:18px;height:18px;border-radius:50%;background:var(--c)"></i></button>
+  <div class="sep" id="sep-b"></div>
+  <div class="seg widths" id="widths"><div class="seg-thumb" id="width-thumb"></div></div>
+  <button class="btn width-pick hidden" id="width-pick" data-tip="Line width" data-key="[ ]"><span class="wline" style="height:3.5px"></span></button>
+  <div class="sep"></div>
+  <button class="btn" id="undo-btn" data-tip="Undo" data-key="Ctrl+Z"><svg class="ic"><use href="#i-undo"/></svg></button>
+  <button class="btn" id="redo-btn" data-tip="Redo" data-key="Ctrl+Y"><svg class="ic"><use href="#i-redo"/></svg></button>
+</div>
+
+<!-- top right -->
+<div class="cluster tr chrome">
+  <div class="glass capsule tr-group">
+    <button class="btn" id="zoom-btn" data-tip="Zoom" data-sub="Ctrl+scroll or pinch to zoom, Space+drag to pan. Click to fit." data-key="Ctrl+0">Fit</button>
+    <button class="btn" id="inspect-btn" data-tip="Show what is under the cursor" data-sub="Rhino's pick under the pointer: the object, its name and layer"><svg class="ic"><use href="#i-target"/></svg></button>
+    <button class="btn" id="marks-btn" data-tip="Marks" data-sub="Every mark, its number, what it hits and your comment"><svg class="ic"><use href="#i-list"/></svg><span class="badge" id="marks-badge"></span></button>
+    <button class="btn" id="settings-btn" data-tip="Settings"><svg class="ic"><use href="#i-sliders"/></svg></button>
+    <button class="btn" id="help-btn" data-tip="Shortcuts and help" data-key="?"><svg class="ic"><use href="#i-help"/></svg></button>
+  </div>
+</div>
+
+<aside class="glass panel closed chrome" id="sidebar">
+  <div class="panel-head"><h2>Task</h2><button class="btn" id="sidebar-close" data-tip="Close"><svg class="ic s16"><use href="#i-x"/></svg></button></div>
+  <div class="panel-body" id="sidebar-body"></div>
+</aside>
+
+<aside class="glass panel closed chrome" id="marks-panel">
+  <div class="panel-head"><h2>Marks <span class="count" id="marks-count"></span></h2><button class="btn" id="marks-close" data-tip="Close"><svg class="ic s16"><use href="#i-x"/></svg></button></div>
+  <div class="panel-body" id="marks-body"></div>
+</aside>
+
+<div id="banners"></div>
+
+<footer class="glass chrome" id="composer">
+  <div id="chips"></div>
+  <div class="crow">
+    <button class="btn" id="attach-btn" data-tip="Add an image" data-sub="Reference images, pasted or dropped onto the spot they apply to"><svg class="ic"><use href="#i-plus"/></svg></button>
+    <textarea id="note" rows="1" spellcheck="true" placeholder="Ask Claude about this view"></textarea>
+    <button class="btn" id="target-btn" data-tip="Where the request goes" data-sub="The Claude Code window that receives the image and your text"></button>
+    <button class="btn" id="queue-btn" data-tip="Add to batch" data-sub="Keep this capture and mark another view. Send pastes them all together." data-key="Ctrl+Shift+Enter"><svg class="ic"><use href="#i-stack"/></svg><span class="badge" id="queue-badge"></span></button>
+    <button class="btn" id="send-btn" data-tip="Send to Claude" data-key="Enter"><svg class="ic"><use href="#i-send"/></svg><span class="badge" id="send-badge"></span></button>
+  </div>
+</footer>
+
+<div id="toasts"></div>
+<div id="hover-tag" class="glass"><div class="h1"></div><div class="h2"></div></div>
+<textarea id="text-editor" class="hidden" spellcheck="false"></textarea>
+<div id="layer"></div>
+<div id="tooltip" class="glass"></div>
+<div id="drop-overlay"><div class="glass card-drop"><svg class="ic"><use href="#i-image"/></svg><span id="drop-text">Drop to add a reference</span></div></div>
+<div id="drop-ring"></div>
+
+<script>
+  (function () {
+    var v = window.CM_VERSION;
+    if (/[?&]mock=/.test(location.search)) document.write('<script src="mock.js?v=' + v + '"><\/script>');
+    document.write('<script src="app.js?v=' + v + '"><\/script>');
+  })();
+</script>
+</body>
+</html>

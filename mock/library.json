@@ -1,0 +1,135 @@
+{
+ "items": [
+  {
+   "id": "cosmos:Materials/Wood/Oak_natural",
+   "name": "Oak, natural",
+   "group": "Wood",
+   "tile": "1 m",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Wood\\Oak_natural\\Oak_natural.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Wood/Walnut_oiled",
+   "name": "Walnut, oiled",
+   "group": "Wood",
+   "tile": "1 m",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Wood\\Walnut_oiled\\Walnut_oiled.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Concrete/Board_formed_concrete",
+   "name": "Board-formed concrete",
+   "group": "Concrete",
+   "tile": "2 m",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Concrete\\Board_formed_concrete\\Board_formed_concrete.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Concrete/Polished_concrete",
+   "name": "Polished concrete",
+   "group": "Concrete",
+   "tile": "1 m",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Concrete\\Polished_concrete\\Polished_concrete.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Stone/Terrazzo_white",
+   "name": "Terrazzo, white",
+   "group": "Stone",
+   "tile": "60 cm",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Stone\\Terrazzo_white\\Terrazzo_white.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Stone/Travertine_honed",
+   "name": "Travertine, honed",
+   "group": "Stone",
+   "tile": "1.2 m",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Stone\\Travertine_honed\\Travertine_honed.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Stone/Basalt_honed",
+   "name": "Basalt, honed",
+   "group": "Stone",
+   "tile": "60 cm",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Stone\\Basalt_honed\\Basalt_honed.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Metal/Brushed_brass",
+   "name": "Brushed brass",
+   "group": "Metal",
+   "tile": "50 cm",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Metal\\Brushed_brass\\Brushed_brass.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Metal/Blackened_steel",
+   "name": "Blackened steel",
+   "group": "Metal",
+   "tile": "1 m",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Metal\\Blackened_steel\\Blackened_steel.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Metal/Zinc_standing_seam",
+   "name": "Zinc standing seam",
+   "group": "Metal",
+   "tile": "2 m",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Metal\\Zinc_standing_seam\\Zinc_standing_seam.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Ceramic/Terracotta_tile",
+   "name": "Terracotta tile",
+   "group": "Ceramic",
+   "tile": "1 m",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Ceramic\\Terracotta_tile\\Terracotta_tile.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Plaster/Lime_render",
+   "name": "Lime render",
+   "group": "Plaster",
+   "tile": "1 m",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Plaster\\Lime_render\\Lime_render.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Glass/Clear_glass",
+   "name": "Clear glass",
+   "group": "Glass",
+   "tile": "",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Glass\\Clear_glass\\Clear_glass.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Landscape/Sedum_roof",
+   "name": "Sedum roof",
+   "group": "Landscape",
+   "tile": "1 m",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Landscape\\Sedum_roof\\Sedum_roof.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Earth/Rammed_earth",
+   "name": "Rammed earth",
+   "group": "Earth",
+   "tile": "2 m",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Earth\\Rammed_earth\\Rammed_earth.vrmat"
+  },
+  {
+   "id": "cosmos:Materials/Cork/Cork_natural",
+   "name": "Cork, natural",
+   "group": "Cork",
+   "tile": "50 cm",
+   "file": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages\\Materials\\Cork\\Cork_natural\\Cork_natural.vrmat"
+  }
+ ],
+ "thumbs": {
+  "cosmos:Materials/Wood/Oak_natural": "../mock/thumbs/m00.png",
+  "cosmos:Materials/Wood/Walnut_oiled": "../mock/thumbs/m01.png",
+  "cosmos:Materials/Concrete/Board_formed_concrete": "../mock/thumbs/m02.png",
+  "cosmos:Materials/Concrete/Polished_concrete": "../mock/thumbs/m03.png",
+  "cosmos:Materials/Stone/Terrazzo_white": "../mock/thumbs/m04.png",
+  "cosmos:Materials/Stone/Travertine_honed": "../mock/thumbs/m05.png",
+  "cosmos:Materials/Stone/Basalt_honed": "../mock/thumbs/m06.png",
+  "cosmos:Materials/Metal/Brushed_brass": "../mock/thumbs/m07.png",
+  "cosmos:Materials/Metal/Blackened_steel": "../mock/thumbs/m08.png",
+  "cosmos:Materials/Metal/Zinc_standing_seam": "../mock/thumbs/m09.png",
+  "cosmos:Materials/Ceramic/Terracotta_tile": "../mock/thumbs/m10.png",
+  "cosmos:Materials/Plaster/Lime_render": "../mock/thumbs/m11.png",
+  "cosmos:Materials/Glass/Clear_glass": "../mock/thumbs/m12.png",
+  "cosmos:Materials/Landscape/Sedum_roof": "../mock/thumbs/m13.png",
+  "cosmos:Materials/Earth/Rammed_earth": "../mock/thumbs/m14.png",
+  "cosmos:Materials/Cork/Cork_natural": "../mock/thumbs/m15.png"
+ },
+ "root": "C:\\Users\\you\\Documents\\Chaos Cosmos\\Packages"
+}

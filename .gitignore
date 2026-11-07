@@ -1,0 +1,15 @@
+# what ClaudeMark writes while you work: captures, batches, replies, logs, your settings and presets
+inbox/*
+!inbox/.gitkeep
+queue/*
+!queue/.gitkeep
+outbox/*
+!outbox/.gitkeep
+presets/*
+!presets/.gitkeep
+sent/
+stale/
+.cache/
+claudemark_settings.json
+*.3dmbak
+__pycache__/
